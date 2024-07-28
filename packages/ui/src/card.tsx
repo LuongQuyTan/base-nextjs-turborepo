@@ -11,18 +11,18 @@ export function Card({
 }): JSX.Element {
   return (
     <a
-      className="ui-group ui-rounded-lg ui-border ui-border-transparent ui-px-5 ui-py-4 ui-transition-colors hover:ui-border-neutral-700 hover:ui-bg-neutral-800/30"
+      className="hover:ui-border-neutral-700 hover:ui-bg-neutral-800/30 ui-px-5 ui-py-4 ui-border ui-border-transparent ui-rounded-lg ui-transition-colors ui-group"
       href={`${href}?utm_source=create-turbo&utm_medium=with-tailwind&utm_campaign=create-turbo"`}
       rel="noopener noreferrer"
       target="_blank"
     >
-      <h2 className="ui-mb-3 ui-text-2xl ui-font-semibold">
+      <h2 className="ui-mb-3 ui-font-semibold ui-text-2xl">
         {title}{" "}
-        <span className="ui-inline-block ui-transition-transform group-hover:ui-translate-x-1 motion-reduce:ui-transform-none">
+        <span className="ui-inline-block motion-reduce:ui-transform-none ui-transition-transform group-hover:ui-translate-x-1">
           -&gt;
         </span>
       </h2>
-      <p className="ui-m-0 ui-max-w-[30ch] ui-text-sm ui-opacity-50">
+      <p className="ui-opacity-50 ui-m-0 ui-max-w-[30ch] ui-text-sm">
         {children}
       </p>
     </a>

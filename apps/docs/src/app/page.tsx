@@ -45,15 +45,15 @@ const LINKS = [
 
 export default function Page(): JSX.Element {
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-      <div className="z-10 items-center justify-between w-full max-w-5xl font-mono text-sm lg:flex">
-        <p className="fixed top-0 left-0 flex justify-center w-full px-4 pt-8 pb-6 border-b bg-gradient-to-b backdrop-blur-2xl border-neutral-800 bg-zinc-800/30 from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:bg-zinc-800/30">
+    <main className="flex flex-col justify-between items-center p-24 min-h-screen">
+      <div className="z-10 lg:flex justify-between items-center w-full max-w-5xl font-mono text-sm">
+        <p className="top-0 left-0 lg:static fixed flex justify-center border-neutral-800 bg-zinc-800/30 lg:bg-gray-200 lg:bg-zinc-800/30 bg-gradient-to-b from-inherit backdrop-blur-2xl px-4 lg:p-4 pt-8 pb-6 lg:border border-b lg:rounded-xl w-full lg:w-auto">
           examples/with-tailwind -&nbsp;
-          <code className="font-mono font-bold">docs</code>
+          <code className="font-bold font-mono">docs</code>
         </p>
-        <div className="fixed bottom-0 left-0 flex items-end justify-center w-full h-48 bg-gradient-to-t from-black via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+        <div className="bottom-0 left-0 lg:static fixed flex justify-center items-end bg-gradient-to-t from-black via-black lg:bg-none w-full lg:w-auto h-48 lg:h-auto">
           <a
-            className="flex gap-2 p-8 pointer-events-none place-items-center lg:pointer-events-auto lg:p-0"
+            className="flex place-items-center gap-2 p-8 lg:p-0 pointer-events-none lg:pointer-events-auto"
             href="https://vercel.com?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"
             rel="noopener noreferrer"
             target="_blank"
@@ -71,9 +71,9 @@ export default function Page(): JSX.Element {
         </div>
       </div>
 
-      <div className="relative flex place-items-center ">
-        <div className="font-sans w-auto pb-16 pt-[48px] md:pb-24 lg:pb-32 md:pt-16 lg:pt-20 flex justify-between gap-8 items-center flex-col relative z-0">
-          <div className="z-50 flex items-center justify-center w-full">
+      <div className="relative flex place-items-center">
+        <div className="relative z-0 flex flex-col justify-between items-center gap-8 pt-[48px] md:pt-16 lg:pt-20 pb-16 md:pb-24 lg:pb-32 w-auto font-sans">
+          <div className="z-50 flex justify-center items-center w-full">
             <div className="absolute min-w-[614px] min-h-[614px]">
               <Image
                 alt="Turborepo"
@@ -82,7 +82,7 @@ export default function Page(): JSX.Element {
                 width={614}
               />
             </div>
-            <div className="absolute z-50 flex items-center justify-center w-64 h-64">
+            <div className="z-50 absolute flex justify-center items-center w-64 h-64">
               <Gradient
                 className="opacity-90 w-[120px] h-[120px]"
                 conic
@@ -90,7 +90,7 @@ export default function Page(): JSX.Element {
               />
             </div>
 
-            <div className="w-[120px] h-[120px] z-50">
+            <div className="z-50 w-[120px] h-[120px]">
               <Image
                 alt=""
                 height={120}
@@ -104,7 +104,7 @@ export default function Page(): JSX.Element {
             className="top-[-500px] opacity-[0.15] w-[1000px] h-[1000px]"
             conic
           />
-          <div className="z-50 flex flex-col items-center justify-center gap-5 px-6 text-center lg:gap-6">
+          <div className="z-50 flex flex-col justify-center items-center gap-5 lg:gap-6 px-6 text-center">
             <svg
               className="w-[160px] md:w-[200px] fill-white"
               viewBox="0 0 506 50"
@@ -126,7 +126,7 @@ export default function Page(): JSX.Element {
         </div>
       </div>
 
-      <div className="grid mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="grid lg:grid-cols-4 mb-32 lg:mb-0 lg:w-full lg:max-w-5xl text-center lg:text-left">
         {LINKS.map(({ title, href, description }) => (
           <Card href={href} key={title} title={title}>
             {description}
