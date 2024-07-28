@@ -8,12 +8,25 @@
     "dist"
   ],
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./styles.css": {
+      "default": "./dist/index.css"
+    },
+    "./components": {
+      "import": "./src/components/index.ts",
+      "require": "./dist/components/index.js"
+    },
+    "./utils": {
+      "import": "./src/utils.ts",
+      "require": "./dist/utils.js"
+    },
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./dist/index.js"
+    }
   },
   "license": "MIT",
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css && tsc --project tsconfig.build.json",
     "lint": "eslint src/",
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "type-check": "tsc --noEmit"
@@ -30,5 +43,14 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.416.0",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
